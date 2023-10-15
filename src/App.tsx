@@ -11,7 +11,7 @@ import { Genre } from "./hooks/useGenres";
 
 export interface GameQuery {
 	genreId?: number;
-	platform?: number;
+	platformId?: number;
 	sortOrder: string;
 	searchText: string;
 }
@@ -51,7 +51,7 @@ function App() {
 					<Flex marginBottom={5}>
 						<Box marginRight={5}>
 							<PlatformSelector
-								selectedPlatformId={gameQuery.platform}
+								selectedPlatformId={gameQuery.platformId}
 								onSelectPlatform={(platform) =>
 									setGameQuery({ ...gameQuery, platformId: platform.id })
 								}
